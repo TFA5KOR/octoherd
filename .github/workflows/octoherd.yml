@@ -11,5 +11,7 @@ jobs:
         with:
           node-version: "16.x"   
       - name: Check octoherd
+        env:
+          step_token: token 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
         run: |
-          npx @octoherd/script-hello-world --octoherd-token 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 "TFA5KOR/*" -R TFA5KOR/test-repo
+          npx @octoherd/script-hello-world --octoherd-token ${ step_token } "TFA5KOR/*" -R TFA5KOR/test-repo
