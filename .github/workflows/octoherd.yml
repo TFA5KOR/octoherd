@@ -12,4 +12,4 @@ jobs:
           node-version: "16.x"   
       - name: Check octoherd
         run: |
-          npx @octoherd/script-hello-world --octoherd-token ${secrets.GITHUB_TOKEN} "TFA5KOR/*" -R "TFA5KOR/*"
+          npx @octoherd/script-hello-world --octoherd-token ${{ secrets.GITHUB_TOKEN }} "TFA5KOR/*" -R "TFA5KOR/*"
