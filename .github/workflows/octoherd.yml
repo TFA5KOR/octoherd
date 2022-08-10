@@ -1,0 +1,15 @@
+name: Test Octoherd
+
+on: push
+
+jobs:
+  test-octokit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: USE NODE JS
+        uses: actions/setup-node@v1
+        with:
+          node-version: "16.x"   
+      - name: Check octoherd
+        run: |
+          npx @octoherd/script-hello-world --octoherd-token ${secrets.GITHUB_TOKEN} "TFA5KOR/*" -R "TFA5KOR/*
